@@ -35,7 +35,7 @@ class ProxyList extends React.Component {
     const {proxies} = this.props;
     return (
       <Table tags header={['Enabled', 'Path', 'URL']}>
-        {proxies.map((proxy) => (
+        {(proxies || []).map((proxy) => (
           <Table.TR key={proxy.id} value={proxy.id}>
             <Table.TD>
               {proxy.enabled ? '{green-bg} Y {/green-bg}' : 'N'}
@@ -66,7 +66,7 @@ export default () => (
                   return prev;
                 }
                 let found = false;
-                const next = prev.proxies.map((proxy) => {
+                const next = (prev.proxies || []).map((proxy) => {
                   if (proxy.id === subscriptionData.data.proxyRegistered.id) {
                     found = true;
                     return {
