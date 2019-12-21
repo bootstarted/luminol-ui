@@ -27,7 +27,7 @@
     "clipboardy": "1.2.3",
     "color-hash": "1.0.3",
     "cross-fetch": "2.2.3",
-    "cuid": "2.1.4",
+    "cuid": "2.1.8",
     "debug": "4.1.0",
     "graphql": "14.0.2",
     "graphql-subscriptions": "1.0.0",
